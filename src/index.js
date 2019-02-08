@@ -6,6 +6,12 @@ const app = express();
 
 const server = require('http').Server(app);
 
+mongoose.connect('mongodb://<user>:<password>@ds127015.mlab.com:27015/blog', 
+    {
+         useNewUrlParser: true 
+    }
+);
+
 app.use(cors());
 app.use(express.json());
 app.use(require('./routes'));
