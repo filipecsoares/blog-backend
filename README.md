@@ -2,6 +2,8 @@
 
 **Project with node and mongodb**
 
-**1) Configure the connect with the data base (index.js)**
+**1) Run 'npm install'**
 
-**2) Run the project with the command 'npm start'**
+**2) Configure the connection with the data base (index.js)**
+
+**3) Run the project with the command 'npm start'**
