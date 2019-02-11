@@ -6,7 +6,7 @@ const app = express();
 
 const server = require('http').Server(app);
 
-mongoose.connect('mongodb://blog:blog1234@ds127015.mlab.com:27015/blog', 
+mongoose.connect('mongodb://<user>:<password>@ds127015.mlab.com:27015/blog', 
     {
          useNewUrlParser: true 
     }

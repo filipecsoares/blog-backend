@@ -12,7 +12,6 @@ const PostSchema = new mongoose.Schema({
     categories: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Category' }],
     comments: [
         {
-            id: Number,
             content: String,
             createdAt: {
                 type: Date,
