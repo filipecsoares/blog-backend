@@ -1,11 +1,11 @@
 const Post = require('../models/Post');
 
 module.exports = {
-    async index(req, res){
+    async findAll(req, res){
         const posts = await Post.find({}).populate('user').populate('categories').sort('-createdAt');
         return res.json(posts);
     },
-    async store(req, res){
+    async create(req, res){
         const post = await Post.create(req.body);
         return res.json(post);
     },
@@ -13,6 +13,12 @@ module.exports = {
         await Post.findByIdAndDelete(req.params.id, function (err) {
             if (err) return next(err);
             res.send('Deleted successfully!');
+        });
+    },
+    async update(req, res){
+        await Post.findByIdAndUpdate(req.params.id, req.body, function (err) {
+            if (err) return next(err);
+            res.send('Updated successfully!');
         });
     }
 };

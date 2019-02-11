@@ -1,11 +1,11 @@
 const Category = require('../models/Category');
 
 module.exports = {
-    async index(req, res){
+    async findAll(req, res){
         const categories = await Category.find({}).sort('-createdAt');
         return res.json(categories);
     },
-    async store(req, res){
+    async create(req, res){
         const category = await Category.create(req.body);
         
         return res.json(category);
