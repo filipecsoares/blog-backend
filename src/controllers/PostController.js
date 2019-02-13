@@ -5,6 +5,10 @@ module.exports = {
         const posts = await Post.find({}).populate('user').populate('categories').sort('-createdAt');
         return res.json(posts);
     },
+    async findById(req, res){
+        const post = await Post.findById(req.params.id).populate('user').populate('categories');
+        return res.json(post);
+    },
     async create(req, res){
         const post = await Post.create(req.body);
         return res.json(post);

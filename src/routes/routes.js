@@ -19,6 +19,7 @@ routes.post('/categories', CategoryController.create);
 routes.delete('/categories/:id', CategoryController.delete);
 
 routes.get('/posts', PostController.findAll);
+routes.get('/posts/:id', PostController.findById);
 routes.post('/posts', PostController.create);
 routes.delete('/posts/:id', PostController.delete);
 routes.put('/posts/:id', PostController.update);
