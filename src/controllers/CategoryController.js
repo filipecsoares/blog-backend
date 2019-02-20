@@ -5,6 +5,10 @@ module.exports = {
         const categories = await Category.find({}).sort('-createdAt');
         return res.json(categories);
     },
+    async findById(req, res){
+        const category = await Category.findById(req.params.id);
+        return res.json(category);
+    },
     async create(req, res){
         const category = await Category.create(req.body);
         

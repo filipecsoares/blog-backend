@@ -15,6 +15,7 @@ routes.post('/users', UserController.create);
 routes.delete('/users/:id', UserController.delete);
 
 routes.get('/categories', CategoryController.findAll);
+routes.get('/categories/:id', CategoryController.findById);
 routes.post('/categories', CategoryController.create);
 routes.delete('/categories/:id', CategoryController.delete);
 
