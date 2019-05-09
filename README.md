@@ -1,6 +1,6 @@
 ﻿# blog-backend
 
-**Project with node and mongodb**
+**Blog Project with node and mongodb**
 
 **1) Run 'npm install'**
 
